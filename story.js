@@ -17,9 +17,18 @@
 // document.write(story);
 
 
-var input = prompt("Pick a number, any number!");
-var topNumber = parseInt(input);
-var randomNumber = Math.floor(Math.random() * topNumber) + 1;
+// var input = prompt("Pick a number, any number!");
+// var topNumber = parseInt(input);
+// var randomNumber = Math.floor(Math.random() * topNumber) + 1;
 
-var message = randomNumber + " is a number between 1 and " + topNumber + " .";
+// var message = randomNumber + " is a number between 1 and " + topNumber + " .";
+// document.write(message);
+
+var input1 = prompt("Okay, let's make this more interesting. Pick a number. Make it big.");
+var topNumber = parseInt(input1);
+var input2 = prompt("And then pick one more. Last time, I promise.");
+var bottomNumber = parseInt(input2);
+
+var randomNumber = Math.floor(Math.random() * (topNumber - bottomNumber + 1)) + bottomNumber;
+var message = randomNumber + " is a number between " + bottomNumber + " and " + topNumber + ".";
 document.write(message);
