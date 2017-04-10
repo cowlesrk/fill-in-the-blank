@@ -24,11 +24,19 @@
 // var message = randomNumber + " is a number between 1 and " + topNumber + " .";
 // document.write(message);
 
-var input1 = prompt("Okay, let's make this more interesting. Pick a number. Make it big.");
-var topNumber = parseInt(input1);
-var input2 = prompt("And then pick one more. Last time, I promise.");
-var bottomNumber = parseInt(input2);
+// var input1 = prompt("Okay, let's make this more interesting. Pick a number. Make it big.");
+// var topNumber = parseInt(input1);
+// var input2 = prompt("And then pick one more. Last time, I promise.");
+// var bottomNumber = parseInt(input2);
 
-var randomNumber = Math.floor(Math.random() * (topNumber - bottomNumber + 1)) + bottomNumber;
-var message = randomNumber + " is a number between " + bottomNumber + " and " + topNumber + ".";
-document.write(message);
+// var randomNumber = Math.floor(Math.random() * (topNumber - bottomNumber + 1)) + bottomNumber;
+// var message = randomNumber + " is a number between " + bottomNumber + " and " + topNumber + ".";
+// document.write(message);
+
+var randomNumber = Math.floor(Math.random() * 6) +1;
+var guess = prompt("I'm thinking of a number bewteen 1 and 6. What is it?");
+if (parseInt(guess) === randomNumber) {
+	document.write("You guessed the number!");
+} else {
+	document.write("Sorry, the number was " + randomNumber + ".");
+}
