@@ -1,3 +1,7 @@
+/////////////////////////
+// Mad Libs Game //
+/////////////////////////
+
 // var questions = 3;
 // var questionsLeft = " [" + questions + " questions left]";
 // var noun = prompt("Please type a noun:" + questionsLeft);
@@ -16,6 +20,9 @@
 
 // document.write(story);
 
+/////////////////////////
+// Picking Numbers Game //
+/////////////////////////
 
 // var input = prompt("Pick a number, any number!");
 // var topNumber = parseInt(input);
@@ -33,10 +40,28 @@
 // var message = randomNumber + " is a number between " + bottomNumber + " and " + topNumber + ".";
 // document.write(message);
 
+/////////////////////////
+// Random Number Game //
+/////////////////////////
+
+var correctGuess = false;
 var randomNumber = Math.floor(Math.random() * 6) +1;
 var guess = prompt("I'm thinking of a number bewteen 1 and 6. What is it?");
 if (parseInt(guess) === randomNumber) {
-	document.write("You guessed the number!");
+	correctGuess = true;
+} else if (parseInt(guess) < randomNumber) {
+	var guessMore = prompt("Try again. That number was too low.");
+		if (parseInt(guessMore) === randomNumber) {
+			correctGuess = true;
+	}
+} else if (parseInt(guess) > randomNumber) {
+	var guessLess = prompt("Try again. That number was too high.");
+		if (parseInt(guessLess) === randomNumber) {
+			correctGuess = true;
+	}
+}	
+if (correctGuess) {
+	document.write("You guessed the number! It was " + randomNumber + ".");
 } else {
 	document.write("Sorry, the number was " + randomNumber + ".");
 }
