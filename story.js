@@ -86,53 +86,69 @@
 
 // quiz begins, no answers correct
 
-var correct = 0;
+// var correct = 0;
 
 // ask questions
 
-var question1 = prompt("How old am I?");
-	if (parseInt(question1) === 25) {
-		correct += 1;
-	}
+// var question1 = prompt("How old am I?");
+// 	if (parseInt(question1) === 25) {
+// 		correct += 1;
+// 	}
 
-var question2 = prompt("What is my favorite color?");
-	if (question2.toUpperCase() === "MINT") {
-		correct += 1;
-	}
+// var question2 = prompt("What is my favorite color?");
+// 	if (question2.toUpperCase() === "MINT") {
+// 		correct += 1;
+// 	}
 
-var question3 = prompt("What is my dog's name?");
-	if (question3.toUpperCase() === "KRYSTAL") {
-		correct += 1;
-	}
+// var question3 = prompt("What is my dog's name?");
+// 	if (question3.toUpperCase() === "KRYSTAL") {
+// 		correct += 1;
+// 	}
 
-var question4 = prompt("How many years have I lived in Charlotte?");
-	if (parseInt(question4) === 23) {
-		correct += 1;
-	}
+// var question4 = prompt("How many years have I lived in Charlotte?");
+// 	if (parseInt(question4) === 23) {
+// 		correct += 1;
+// 	}
 
-var question5 = prompt("What is my favorite fruit?");
-	if (question5.toUpperCase() === "MANGO" || "STRAWBERRY" || "STRAWBERRIES") {
-		correct += 1;
-	}
-
-// output results
-
-document.write("You got " + correct + " out of 5 questions correct.");
+// var question5 = prompt("What is my favorite fruit?");
+// 	if (question5.toUpperCase() === "MANGO" || "STRAWBERRY" || "STRAWBERRIES") {
+// 		correct += 1;
+// 	}
 
 // output results
 
-if ( correct === 5 ) {
-	document.write("You got a gold crown!");
-} else if ( correct >= 3) {
-	document.write("You got a silver crown!");
-} else if ( correct >= 1) {
-	document.write("You got a bronze crown!");
-} else {
-	document.write("You did not earn a crown. Better luck next time!");
+// document.write("You got " + correct + " out of 5 questions correct.");
+
+// output results
+
+// if ( correct === 5 ) {
+// 	document.write("You got a gold crown!");
+// } else if ( correct >= 3) {
+// 	document.write("You got a silver crown!");
+// } else if ( correct >= 1) {
+// 	document.write("You got a bronze crown!");
+// } else {
+// 	document.write("You did not earn a crown. Better luck next time!");
+// }
+
+
+/////////////////////////
+// Checking Email //
+/////////////////////////
+
+function isEmailEmpty() {
+	var field = document.getElementById("email");
+if (field.value === "") {
+	return true;	
+	} else {
+		return false;
+	}
 }
 
-
-
+var fieldTest = isEmailEmpty();
+if (fieldTest === true) {
+	alert("Please provide your email address.");
+}
 
 
 
