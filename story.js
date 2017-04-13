@@ -178,13 +178,17 @@
 /////////////////////////
 
 function getRandomNumber ( lower, upper ) {
+	if ( isNaN(lower) || isNaN(upper) ) {
+		throw new Error("Must be numbers");
+	}
+
 	var randomNumber = Math.floor(Math.random() * (upper - lower + 1)) + lower;
 	return randomNumber;
 }
 
 alert( getRandomNumber(2, 20) );
 alert( getRandomNumber(20, 200) );
-alert( getRandomNumber(200, 2000) );
+alert( getRandomNumber(200, hi) );
 
 
 
