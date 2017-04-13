@@ -177,22 +177,32 @@
 // Random Number Range Challenge //
 /////////////////////////
 
-function getRandomNumber ( lower, upper ) {
-	if ( isNaN(lower) || isNaN(upper) ) {
-		throw new Error("Must be numbers");
-	}
+// function getRandomNumber ( lower, upper ) {
+// 	if ( isNaN(lower) || isNaN(upper) ) {
+// 		throw new Error("Must be numbers");
+// 	}
 
-	var randomNumber = Math.floor(Math.random() * (upper - lower + 1)) + lower;
-	return randomNumber;
+// 	var randomNumber = Math.floor(Math.random() * (upper - lower + 1)) + lower;
+// 	return randomNumber;
+// }
+
+// alert( getRandomNumber(2, 20) );
+// alert( getRandomNumber(20, 200) );
+// alert( getRandomNumber(200, hi) );
+
+/////////////////////////
+// Random Number Range Challenge with Prompts //
+/////////////////////////
+
+function getRandomNumber(upper, lower) {
+    var lowNum = parseInt(prompt('Please choose a number.'));
+    var highNum = parseInt(prompt('Please choose a number larger than ' + lowNum + '.'));
+    if ( isNaN(lowNum) || isNaN(highNum) ) {
+        throw new Error('WRONG. \ TRY AGAIN.');
+} return Math.floor(Math.random() * (highNum - lowNum + 1)) + lowNum;
 }
 
-alert( getRandomNumber(2, 20) );
-alert( getRandomNumber(20, 200) );
-alert( getRandomNumber(200, hi) );
-
-
-
-
+console.log(getRandomNumber());
 
 
 
