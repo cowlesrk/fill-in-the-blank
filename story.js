@@ -167,8 +167,8 @@
 // Caclulate Area //
 /////////////////////////
 
-function getArea(width, length) {
+function getArea(width, length, unit) {
 	var area = width * length;
-	return area;
+	return area + " " + unit;
 }
-alert(getArea(10,20));
+alert(getArea(10,20, "sq ft"));
