@@ -136,20 +136,39 @@
 // Checking Email //
 /////////////////////////
 
-function isEmailEmpty() {
-	var field = document.getElementById("email");
-if (field.value === "") {
-	return true;	
-	} else {
-		return false;
-	}
+// function isEmailEmpty() {
+// 	var field = document.getElementById("email");
+// if (field.value === "") {
+// 	return true;	
+// 	} else {
+// 		return false;
+// 	}
+// }
+
+// var fieldTest = isEmailEmpty();
+// if (fieldTest === true) {
+// 	alert("Please provide your email address.");
+// }
+
+/////////////////////////
+// Random Number Game with Functions //
+/////////////////////////
+ 
+// function getRandomNumber ( upper ) {
+// 	var randomNumber = Math.floor( Math.random() * upper ) + 1;
+// 	return randomNumber;
+// }
+
+// alert( getRandomNumber(6) );
+// alert( getRandomNumber(600) );
+// alert( getRandomNumber(60000) );
+
+/////////////////////////
+// Caclulate Area //
+/////////////////////////
+
+function getArea(width, length) {
+	var area = width * length;
+	return area;
 }
-
-var fieldTest = isEmailEmpty();
-if (fieldTest === true) {
-	alert("Please provide your email address.");
-}
-
-
-
-
+alert(getArea(10,20));
