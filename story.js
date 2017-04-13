@@ -167,8 +167,39 @@
 // Caclulate Area //
 /////////////////////////
 
-function getArea(width, length, unit) {
-	var area = width * length;
-	return area + " " + unit;
+// function getArea(width, length, unit) {
+// 	var area = width * length;
+// 	return area + " " + unit;
+// }
+// alert(getArea(10,20, "sq ft"));
+
+/////////////////////////
+// Random Number Range Challenge //
+/////////////////////////
+
+function getRandomNumber ( lower, upper ) {
+	var randomNumber = Math.floor(Math.random() * (upper - lower + 1)) + lower;
+	return randomNumber;
 }
-alert(getArea(10,20, "sq ft"));
+
+alert( getRandomNumber(2, 20) );
+alert( getRandomNumber(20, 200) );
+alert( getRandomNumber(200, 2000) );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
