@@ -208,22 +208,26 @@
 // Counter Loop //
 /////////////////////////
 
-
+// var counter = 1;
+// while ( counter <= 10 ) {
+//   console.log(counter);
+//   counter += 1;
+// }
 
 /////////////////////////
-// Print 10 Random Numbers //
+// Print 10 Random Numbers Loop//
 /////////////////////////
 
-function randomNumber(upper) {
-	return Math.floor( Math.random() * upper) + 1;
-}
+// function randomNumber(upper) {
+// 	return Math.floor( Math.random() * upper) + 1;
+// }
 
-var counter = 0;
-while (counter < 10) {
-	  var number = randomNumber(6);
-	  document.write(number + " ");
-	  counter += 1;
-}
+// var counter = 0;
+// while (counter < 10) {
+// 	  var number = randomNumber(6);
+// 	  document.write(number + " ");
+// 	  counter += 1;
+// }
 
 
 
