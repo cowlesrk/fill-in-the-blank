@@ -215,7 +215,7 @@
 // }
 
 /////////////////////////
-// Print 10 Random Numbers Loop//
+// Print 10 Random Numbers Loop //
 /////////////////////////
 
 // function randomNumber(upper) {
@@ -228,6 +228,40 @@
 // 	  document.write(number + " ");
 // 	  counter += 1;
 // }
+
+/////////////////////////
+// Computer vs. Computer Guessing Game //
+/////////////////////////
+
+var max = 1000;
+var randomNumber = getRandomNumber(max);
+var guess;
+var attempts = 0;
+
+function getRandomNumber(max) {
+	return Math.floor( Math.random() * max ) + 1;
+}
+
+while ( guess !== randomNumber) {
+	guess = getRandomNumber( max );
+	attempts += 1;
+}
+
+document.write("It took " + attempts + " times for the computer to guess " + randomNumber);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
