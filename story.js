@@ -194,15 +194,36 @@
 // Random Number Range Challenge with Prompts //
 /////////////////////////
 
-function getRandomNumber(upper, lower) {
-    var lowNum = parseInt(prompt('Please choose a number.'));
-    var highNum = parseInt(prompt('Please choose a number larger than ' + lowNum + '.'));
-    if ( isNaN(lowNum) || isNaN(highNum) ) {
-        throw new Error('WRONG. \ TRY AGAIN.');
-} return Math.floor(Math.random() * (highNum - lowNum + 1)) + lowNum;
+// function getRandomNumber(upper, lower) {
+//     var lowNum = parseInt(prompt('Please choose a number.'));
+//     var highNum = parseInt(prompt('Please choose a number larger than ' + lowNum + '.'));
+//     if ( isNaN(lowNum) || isNaN(highNum) ) {
+//         throw new Error('WRONG. \ TRY AGAIN.');
+// } return Math.floor(Math.random() * (highNum - lowNum + 1)) + lowNum;
+// }
+
+// console.log(getRandomNumber());
+
+/////////////////////////
+// Counter Loop //
+/////////////////////////
+
+
+
+/////////////////////////
+// Print 10 Random Numbers //
+/////////////////////////
+
+function randomNumber(upper) {
+	return Math.floor( Math.random() * upper) + 1;
 }
 
-console.log(getRandomNumber());
+var counter = 0;
+while (counter < 10) {
+	  var number = randomNumber(6);
+	  document.write(number + " ");
+	  counter += 1;
+}
 
 
 
