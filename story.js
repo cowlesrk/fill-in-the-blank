@@ -287,40 +287,67 @@
 // document.write(html);
 
 /////////////////////////
-// Adding for Loops to Guessing Game //
+// Adding to Guessing Game //
 /////////////////////////
 
-var randomNumber = getRandomNumber(10);
-var guess;
-var guessCount = 0;
-var correctGuess = false;
+// var randomNumber = getRandomNumber(10);
+// var guess;
+// var guessCount = 0;
+// var correctGuess = false;
 
-function getRandomNumber(max) {
-	var num = Math.floor( Math.random() * max ) + 1;
-	return num;
+// function getRandomNumber(max) {
+// 	var num = Math.floor( Math.random() * max ) + 1;
+// 	return num;
+// }
+
+// while ( guessCount < 10 ) {
+// 	guess = prompt("I'm thinking of a number between 1 and 10. What is it?");
+// 	guessCount += 1;
+// 	if (parseInt(guess) === randomNumber) {
+// 		correctGuess = true;
+// 		break;
+// 	}
+// } 
+
+// if ( correctGuess ) {
+// 	document.write("It took " + guessCount + " times for you to guess " + randomNumber);
+// } else {
+// 	document.write("Sorry, you didn't guess it.");
+// }
+
+/////////////////////////
+// DRY Refactor Challenge //
+/////////////////////////
+
+var html = '';
+var red;
+var green;
+var blue;
+var rgbColor;
+
+// var counter = 0;
+
+// while (counter <= 10) {
+// red = Math.floor(Math.random() * 256 );
+// green = Math.floor(Math.random() * 256 );
+// blue = Math.floor(Math.random() * 256 );
+// rgbColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
+// html += '<div style="background-color:' + rgbColor + '"></div>';
+// counter += 1;
+// }
+
+// document.write(html);
+
+for ( var counter = 1; counter <= 10; counter +=1) {
+red = Math.floor(Math.random() * 256 );
+green = Math.floor(Math.random() * 256 );
+blue = Math.floor(Math.random() * 256 );
+rgbColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
+html += '<div style="background-color:' + rgbColor + '"></div>';
+
 }
 
-while ( guessCount < 10 ) {
-	guess = prompt("I'm thinking of a number between 1 and 10. What is it?");
-	guessCount += 1;
-	if (parseInt(guess) === randomNumber) {
-		correctGuess = true;
-		break;
-	}
-} 
-
-if ( correctGuess ) {
-	document.write("It took " + guessCount + " times for you to guess " + randomNumber);
-} else {
-	document.write("Sorry, you didn't guess it.");
-}
-
-
-
-
-
-
-
+document.write(html);
 
 
 
