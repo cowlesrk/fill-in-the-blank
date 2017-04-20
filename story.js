@@ -338,10 +338,14 @@ var rgbColor;
 
 // document.write(html);
 
+function randomRGB() {
+	return Math.floor(Math.random() * 256);
+}
+
 for ( var counter = 1; counter <= 10; counter +=1) {
-red = Math.floor(Math.random() * 256 );
-green = Math.floor(Math.random() * 256 );
-blue = Math.floor(Math.random() * 256 );
+red = randomRGB();
+green = randomRGB();
+blue = randomRGB();
 rgbColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
 html += '<div style="background-color:' + rgbColor + '"></div>';
 
