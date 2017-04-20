@@ -278,16 +278,42 @@
 // Print divs to page //
 /////////////////////////
 
-var html = "";
+// var html = "";
 
-for ( var num = 1; num <= 10; num += 1 ) {
-	html += "<div>" + num + "</div>";
+// for ( var num = 1; num <= 10; num += 1 ) {
+// 	html += "<div>" + num + "</div>";
+// }
+
+// document.write(html);
+
+/////////////////////////
+// Adding for Loops to Guessing Game //
+/////////////////////////
+
+var randomNumber = getRandomNumber(10);
+var guess;
+var guessCount = 0;
+var correctGuess = false;
+
+function getRandomNumber(max) {
+	var num = Math.floor( Math.random() * max ) + 1;
+	return num;
 }
 
-document.write(html);
+while ( guessCount < 10 ) {
+	guess = prompt("I'm thinking of a number between 1 and 10. What is it?");
+	guessCount += 1;
+	if (parseInt(guess) === randomNumber) {
+		correctGuess = true;
+		break;
+	}
+} 
 
-
-
+if ( correctGuess ) {
+	document.write("It took " + guessCount + " times for you to guess " + randomNumber);
+} else {
+	document.write("Sorry, you didn't guess it.");
+}
 
 
 
