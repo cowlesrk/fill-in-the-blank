@@ -338,22 +338,48 @@ var rgbColor;
 
 // document.write(html);
 
+/////////////////////////
+
+// function randomRGB() {
+// 	return Math.floor(Math.random() * 256);
+// }
+
+// for ( var counter = 1; counter <= 10; counter +=1) {
+// red = randomRGB();
+// green = randomRGB();
+// blue = randomRGB();
+// rgbColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
+// html += '<div style="background-color:' + rgbColor + '"></div>';
+
+// }
+
+// document.write(html);
+
+/////////////////////////
+
 function randomRGB() {
 	return Math.floor(Math.random() * 256);
 }
 
-for ( var counter = 1; counter <= 10; counter +=1) {
-red = randomRGB();
-green = randomRGB();
-blue = randomRGB();
-rgbColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
-html += '<div style="background-color:' + rgbColor + '"></div>';
+function randomColor() {
+	var color = 'rgb(';
+	color += randomRGB() + ',';
+	color += randomRGB() + ',';
+	color += randomRGB() + ')';
+	return color;
+}
+
+function print(content) {
+	document.write(content);
+}
+
+for ( var counter = 0; counter < 100; counter +=1) {
+	rgbColor = randomColor();
+	html += '<div style="background-color:' + rgbColor + '""></div>';
 
 }
 
-document.write(html);
-
-
+print(html);
 
 
 
