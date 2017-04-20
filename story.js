@@ -253,30 +253,38 @@
 // User vs. Computer Guessing Game //
 /////////////////////////
 
-var randomNumber = getRandomNumber(10);
-var guess;
-var guessCount = 0;
-var correctGuess = false;
+// var randomNumber = getRandomNumber(10);
+// var guess;
+// var guessCount = 0;
+// var correctGuess = false;
 
-function getRandomNumber(max) {
-	var num = Math.floor( Math.random() * max ) + 1;
-	return num;
+// function getRandomNumber(max) {
+// 	var num = Math.floor( Math.random() * max ) + 1;
+// 	return num;
+// }
+
+// do {
+// 	guess = prompt("I'm thinking of a number between 1 and 10. What is it?");
+// 	guessCount += 1;
+// 	if (parseInt(guess) === randomNumber) {
+// 		correctGuess = true;
+// 	}
+// } while ( ! correctGuess )
+
+
+// document.write("It took " + guessCount + " times for you to guess " + randomNumber);
+
+/////////////////////////
+// Print divs to page //
+/////////////////////////
+
+var html = "";
+
+for ( var num = 1; num <= 10; num += 1 ) {
+	html += "<div>" + num + "</div>";
 }
 
-do {
-	guess = prompt("I'm thinking of a number between 1 and 10. What is it?");
-	guessCount += 1;
-	if (parseInt(guess) === randomNumber) {
-		correctGuess = true;
-	}
-} while ( ! correctGuess )
-
-
-document.write("It took " + guessCount + " times for you to guess " + randomNumber);
-
-
-
-
+document.write(html);
 
 
 
