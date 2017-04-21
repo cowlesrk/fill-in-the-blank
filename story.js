@@ -415,6 +415,42 @@
 
 // Use loops and an array to create a quiz application that tracks the number of quiz questions answered correctly.
 
+// My Solution (can't get arrays to compare):
+/////////////////////////
+
+// var quiz = [
+
+// 	["How many states are in the United States?", 50],
+// 	["How many legs does an insect have?", 6],
+// 	["How many continents are there?", 7]
+// ];
+
+// var correctAnswers = 0;
+// var answers = [];
+
+// function askQuestions ( questions ) {
+
+// 	for (i = 0; i < quiz.length; i += 1){
+// 	questions = prompt(quiz[i][0]);
+// 	answers.push( parseInt(questions) );
+// 	console.log(answers);
+
+// 	if (answers[0][1] === quiz[0][1]){
+// 	correctAnswers += 1;
+// 	console.log(correctAnswers);
+// 		}
+// 	}
+
+// }
+
+// askQuestions();
+
+// document.write("You got " + correctAnswers + " correct.");
+
+
+// Instructor Solution:
+/////////////////////////
+
 var quiz = [
 
 	["How many states are in the United States?", 50],
@@ -422,34 +458,27 @@ var quiz = [
 	["How many continents are there?", 7]
 ];
 
-var answers = [];
+var correctAnswers = 0;
+var question;
+var answer;
+var response;
+var html;
 
-function askQuestions ( questions ) {
+function print(message){
+	document.write(message);
+}
 
-	for (i = 0; i < quiz.length; i += 1){
-	questions = prompt(quiz[i][0]);
-	answers.push(questions);
-	console.log(answers);
-
-
-
+for (i = 0; i < quiz.length; i += 1){
+	questions = quiz[i][0];
+	answer = quiz[i][1];
+	response = parseInt( prompt(questions) );
+	
+	if (response === answer) {
+		correctAnswers += 1;
 	}
 
 }
-askQuestions();
 
-// while ( guessCount < 10 ) {
-// 	guess = prompt("I'm thinking of a number between 1 and 10. What is it?");
-// 	guessCount += 1;
-// 	if (parseInt(guess) === randomNumber) {
-// 		correctGuess = true;
-// 		break;
-// 	}
-// } 
-
-// if ( correctGuess ) {
-// 	document.write("It took " + guessCount + " times for you to guess " + randomNumber);
-// } else {
-// 	document.write("Sorry, you didn't guess it.");
-// }
+html = "You got " + correctAnswers + " question(s) correct.";
+print(html);
 
