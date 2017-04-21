@@ -319,11 +319,11 @@
 // DRY Refactor Challenge //
 /////////////////////////
 
-var html = '';
-var red;
-var green;
-var blue;
-var rgbColor;
+// var html = '';
+// var red;
+// var green;
+// var blue;
+// var rgbColor;
 
 // var counter = 0;
 
@@ -357,33 +357,54 @@ var rgbColor;
 
 /////////////////////////
 
-function randomRGB() {
-	return Math.floor(Math.random() * 256);
+// function randomRGB() {
+// 	return Math.floor(Math.random() * 256);
+// }
+
+// function randomColor() {
+// 	var color = 'rgb(';
+// 	color += randomRGB() + ',';
+// 	color += randomRGB() + ',';
+// 	color += randomRGB() + ')';
+// 	return color;
+// }
+
+// function print(content) {
+// 	document.write(content);
+// }
+
+// for ( var counter = 0; counter < 100; counter +=1) {
+// 	rgbColor = randomColor();
+// 	html += '<div style="background-color:' + rgbColor + '""></div>';
+
+// }
+
+// print(html);
+
+/////////////////////////
+// Search for Items in an Array //
+/////////////////////////
+
+var inStock = ["apples", "eggs", "milk", "cookies", "carrots"];
+var search;
+
+function print(message) {
+	document.write('<p>' + message + '</p>');
 }
 
-function randomColor() {
-	var color = 'rgb(';
-	color += randomRGB() + ',';
-	color += randomRGB() + ',';
-	color += randomRGB() + ')';
-	return color;
+while (true) {
+	search = prompt("Search for a product in our store. Type 'list' to show all of the products and 'quit' to exit");
+	search = search.toLowerCase();
+	if ( search === "quit") {
+		break;
+	} else if ( search === "list") {
+		print( inStock.join(", ") );
+	} else {
+		if ( inStock.indexOf( search ) > -1) {
+			print( "Yes, we have " + search + " in stock.");
+		} else {
+			print( "Sorry, " + search + " is not in stock.");
+		}
+	}
+
 }
-
-function print(content) {
-	document.write(content);
-}
-
-for ( var counter = 0; counter < 100; counter +=1) {
-	rgbColor = randomColor();
-	html += '<div style="background-color:' + rgbColor + '""></div>';
-
-}
-
-print(html);
-
-
-
-
-
-
-
