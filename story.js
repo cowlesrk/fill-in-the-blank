@@ -385,26 +385,51 @@
 // Search for Items in an Array //
 /////////////////////////
 
-var inStock = ["apples", "eggs", "milk", "cookies", "carrots"];
-var search;
+// var inStock = ["apples", "eggs", "milk", "cookies", "carrots"];
+// var search;
 
-function print(message) {
-	document.write('<p>' + message + '</p>');
-}
+// function print(message) {
+// 	document.write('<p>' + message + '</p>');
+// }
 
-while (true) {
-	search = prompt("Search for a product in our store. Type 'list' to show all of the products and 'quit' to exit");
-	search = search.toLowerCase();
-	if ( search === "quit") {
-		break;
-	} else if ( search === "list") {
-		print( inStock.join(", ") );
-	} else {
-		if ( inStock.indexOf( search ) > -1) {
-			print( "Yes, we have " + search + " in stock.");
-		} else {
-			print( "Sorry, " + search + " is not in stock.");
-		}
+// while (true) {
+// 	search = prompt("Search for a product in our store. Type 'list' to show all of the products and 'quit' to exit");
+// 	search = search.toLowerCase();
+// 	if ( search === "quit") {
+// 		break;
+// 	} else if ( search === "list") {
+// 		alert( inStock.join(", ") );
+// 	} else {
+// 		if ( inStock.indexOf( search ) > -1) {
+// 			alert( "Yes, we have " + search + " in stock.");
+// 		} else {
+// 			alert( "Sorry, " + search + " is not in stock.");
+// 		}
+// 	}
+
+// }
+
+/////////////////////////
+// Quiz Challenge //
+/////////////////////////
+
+// Use loops and an array to create a quiz application that tracks the number of quiz questions answered correctly.
+
+var quiz = [
+
+	["How many states are in the United States?", 50],
+	["How many legs does an insect have?", 6],
+	["How many continents are there?", 7]
+];
+
+function askQuestions ( questions ) {
+
+	for (i = 0; i < quiz.length; i += 1){
+	questions = prompt(quiz[i][0]);
+
 	}
 
 }
+
+askQuestions();
+
