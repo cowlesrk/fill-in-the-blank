@@ -422,14 +422,34 @@ var quiz = [
 	["How many continents are there?", 7]
 ];
 
+var answers = [];
+
 function askQuestions ( questions ) {
 
 	for (i = 0; i < quiz.length; i += 1){
 	questions = prompt(quiz[i][0]);
+	answers.push(questions);
+	console.log(answers);
+
+
 
 	}
 
 }
-
 askQuestions();
+
+// while ( guessCount < 10 ) {
+// 	guess = prompt("I'm thinking of a number between 1 and 10. What is it?");
+// 	guessCount += 1;
+// 	if (parseInt(guess) === randomNumber) {
+// 		correctGuess = true;
+// 		break;
+// 	}
+// } 
+
+// if ( correctGuess ) {
+// 	document.write("It took " + guessCount + " times for you to guess " + randomNumber);
+// } else {
+// 	document.write("Sorry, you didn't guess it.");
+// }
 
