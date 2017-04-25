@@ -451,34 +451,49 @@
 // Instructor Solution:
 /////////////////////////
 
-var quiz = [
+// var quiz = [
 
-	["How many states are in the United States?", 50],
-	["How many legs does an insect have?", 6],
-	["How many continents are there?", 7]
-];
+// 	["How many states are in the United States?", 50],
+// 	["How many legs does an insect have?", 6],
+// 	["How many continents are there?", 7]
+// ];
 
-var correctAnswers = 0;
-var question;
-var answer;
-var response;
-var html;
+// var correctAnswers = 0;
+// var question;
+// var answer;
+// var response;
+// var html;
 
-function print(message){
-	document.write(message);
-}
+// function print(message){
+// 	document.write(message);
+// }
 
-for (i = 0; i < quiz.length; i += 1){
-	questions = quiz[i][0];
-	answer = quiz[i][1];
-	response = parseInt( prompt(questions) );
+// for (i = 0; i < quiz.length; i += 1){
+// 	questions = quiz[i][0];
+// 	answer = quiz[i][1];
+// 	response = parseInt( prompt(questions) );
 	
-	if (response === answer) {
-		correctAnswers += 1;
-	}
+// 	if (response === answer) {
+// 		correctAnswers += 1;
+// 	}
 
+// }
+
+// html = "You got " + correctAnswers + " question(s) correct.";
+// print(html);
+
+/////////////////////////
+// For In Object Loop //
+/////////////////////////
+
+var student = {
+	name: "Rachel",
+	country: "USA",
+	age: 25,
+	treehouseStudent: true,
+	skills: ["JavaScript", "HTML", "CSS"]
+};
+
+for (prop in student) {
+	console.log(prop, ": ", student[prop]);
 }
-
-html = "You got " + correctAnswers + " question(s) correct.";
-print(html);
-
