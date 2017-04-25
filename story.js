@@ -502,53 +502,132 @@
 // Build an Object Challenge //
 /////////////////////////
 
-var students = [
+// var students = [
 
-	{	name: "Rachel",
-		track: "JavaScript",
-		achievements: 39,
-		points: 3234 
-	},
+// 	{	name: "Rachel",
+// 		track: "JavaScript",
+// 		achievements: 39,
+// 		points: 3234 
+// 	},
 
-	{	name: "Ryan",
-		track: "Ruby on Rails",
-		achievements: 25,
-		points: 2526 
-	},
+// 	{	name: "Ryan",
+// 		track: "Ruby on Rails",
+// 		achievements: 25,
+// 		points: 2526 
+// 	},
 
-	{	name: "Travis",
-		track: "Web Design",
-		achievements: 55,
-		points: 4596 
-	},
+// 	{	name: "Travis",
+// 		track: "Web Design",
+// 		achievements: 55,
+// 		points: 4596 
+// 	},
 
-	{	name: "Ariel",
-		track: "Wordpress Development",
-		achievements: 31,
-		points: 34136 
-	},
+// 	{	name: "Ariel",
+// 		track: "Wordpress Development",
+// 		achievements: 31,
+// 		points: 34136 
+// 	},
 
-	{	name: "Zuko",
-		track: "HONOR",
-		achievements: 99,
-		points: 9999 
-	}
+// 	{	name: "Zuko",
+// 		track: "HONOR",
+// 		achievements: 99,
+// 		points: 9999 
+// 	}
 
-];
+// ];
 
-var message = ""; /* holds a string of HTML that will build up in the loop and print to the document */
-var student; /* holds a student object for each time the loop runs */
+// var message = "";  holds a string of HTML that will build up in the loop and print to the document 
+// var student; /* holds a student object for each time the loop runs */
+// var search;
 
-function print(message){
-	document.write(message);
-}
+// function print(message){
+// 	document.write(message);
+// }
 
-for (var i = 0; i < students.length; i += 1){
-	student = students[i];
-	message += "<h4>Student: " + student.name + "</h4>";
-	message += "<p>Track: " + student.track + "</p>";
-	message += "<p>Achievements: " + student.achievements + "</p>";
-	message += "<p>Points: " + student.points + "</p>";
-}
+// for (var i = 0; i < students.length; i += 1){
+// 	student = students[i];
+// 	message += "<h4>Student: " + student.name + "</h4>";
+// 	message += "<p>Track: " + student.track + "</p>";
+// 	message += "<p>Achievements: " + student.achievements + "</p>";
+// 	message += "<p>Points: " + student.points + "</p>";
+// }
 
-print(message);
+// print(message);
+
+
+
+/////////////////////////
+// Student Search Challenge //
+/////////////////////////
+
+// var students = [
+
+// 	{	name: "Rachel",
+// 		track: "JavaScript",
+// 		achievements: 39,
+// 		points: 3234 
+// 	},
+
+// 	{	name: "Ryan",
+// 		track: "Ruby on Rails",
+// 		achievements: 25,
+// 		points: 2526 
+// 	},
+
+// 	{	name: "Travis",
+// 		track: "Web Design",
+// 		achievements: 55,
+// 		points: 4596 
+// 	},
+
+// 	{	name: "Ariel",
+// 		track: "Wordpress Development",
+// 		achievements: 31,
+// 		points: 34136 
+// 	},
+
+// 	{	name: "Zuko",
+// 		track: "HONOR",
+// 		achievements: 99,
+// 		points: 9999 
+// 	}
+
+// ];
+
+// var student; 
+// var search;
+
+
+// function getStudentReport( student ){
+// 	var report = "<h4>Student: " + student.name + "</h4>";
+// 	report += "<p>Track: " + student.track + "</p>";
+// 	report += "<p>Achievements: " + student.achievements + "</p>";
+// 	report += "<p>Points: " + student.points + "</p>";
+// 	return report;
+// };
+
+
+
+// while (true) {
+// 	search = prompt("Search for a student in our database. Type a name to show the data and type 'quit' to exit.");
+// 	if ( search === null || search.toLowerCase() === "quit" ){
+// 		break;
+// 	}
+
+// 	for (var i = 0; i < students.length; i += 1){
+// 	student = students[i];
+// 	if ( student.name === search ){
+// 		message = getStudentReport( student );
+// 		document.write(message);
+// 	}
+
+//    }
+
+// };
+
+
+
+
+
+
+
