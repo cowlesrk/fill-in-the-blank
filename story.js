@@ -508,25 +508,25 @@ var students = [
 		track: "JavaScript",
 		achievements: 39,
 		points: 3234 
-	}
+	},
 
 	{	name: "Ryan",
 		track: "Ruby on Rails",
 		achievements: 25,
 		points: 2526 
-	}
+	},
 
 	{	name: "Travis",
 		track: "Web Design",
 		achievements: 55,
 		points: 4596 
-	}
+	},
 
 	{	name: "Ariel",
 		track: "Wordpress Development",
 		achievements: 31,
 		points: 34136 
-	}
+	},
 
 	{	name: "Zuko",
 		track: "HONOR",
@@ -535,3 +535,20 @@ var students = [
 	}
 
 ];
+
+var message = ""; /* holds a string of HTML that will build up in the loop and print to the document */
+var student; /* holds a student object for each time the loop runs */
+
+function print(message){
+	document.write(message);
+}
+
+for (var i = 0; i < students.length; i += 1){
+	student = students[i];
+	message += "<h4>Student: " + student.name + "</h4>";
+	message += "<p>Track: " + student.track + "</p>";
+	message += "<p>Achievements: " + student.achievements + "</p>";
+	message += "<p>Points: " + student.points + "</p>";
+}
+
+print(message);
