@@ -486,14 +486,52 @@
 // For In Object Loop //
 /////////////////////////
 
-var student = {
-	name: "Rachel",
-	country: "USA",
-	age: 25,
-	treehouseStudent: true,
-	skills: ["JavaScript", "HTML", "CSS"]
-};
+// var student = {
+// 	name: "Rachel",
+// 	country: "USA",
+// 	age: 25,
+// 	treehouseStudent: true,
+// 	skills: ["JavaScript", "HTML", "CSS"]
+// };
 
-for (prop in student) {
-	console.log(prop, ": ", student[prop]);
-}
+// for (prop in student) {
+// 	console.log(prop, ": ", student[prop]);
+// }
+
+/////////////////////////
+// Build an Object Challenge //
+/////////////////////////
+
+var students = [
+
+	{	name: "Rachel",
+		track: "JavaScript",
+		achievements: 39,
+		points: 3234 
+	}
+
+	{	name: "Ryan",
+		track: "Ruby on Rails",
+		achievements: 25,
+		points: 2526 
+	}
+
+	{	name: "Travis",
+		track: "Web Design",
+		achievements: 55,
+		points: 4596 
+	}
+
+	{	name: "Ariel",
+		track: "Wordpress Development",
+		achievements: 31,
+		points: 34136 
+	}
+
+	{	name: "Zuko",
+		track: "HONOR",
+		achievements: 99,
+		points: 9999 
+	}
+
+];
